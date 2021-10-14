@@ -24,7 +24,6 @@ class TaskDbConnect extends AsyncTask<Void, Void, String> {
         try{
             Class.forName("com.mysql.jdbc.Driver");
 //            Connection conn= DriverManager.getConnection("jdbc:mysql://192.168.0.32/sales_db","and_user","android0216");
-//            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8","and_user","android0216");
             Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf8/sales_db","and_user","android0216");
             Statement stmt=conn.createStatement();
             ResultSet rs=stmt.executeQuery("Select * from sales_data");
